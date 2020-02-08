@@ -1,0 +1,16 @@
+vector<int> formatArray(vector<int> a,int n)
+{
+    int j,temp;
+    
+        for(j=1;j<n;j=j+2)
+        {
+            if(a[j]<a[j-1])
+            {
+                 temp=a[j];
+                 a[j]=a[j-1];
+                 a[j-1]=temp;
+            }
+        }
+    return a;
+   
+}
