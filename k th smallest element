@@ -1,0 +1,25 @@
+#include <iostream>
+#include<algorithm>
+using namespace std;
+#define size 100000
+int main() {
+	int T,N,K,i,j,c,x,y;
+	int *m;
+	int arr[size];
+	cin>>T;
+	for(i=0;i<T;i++)
+	{
+	    cin>>N;
+	    for(j=0;j<N;j++)
+	    {
+	        cin>>arr[j] ;
+	    }
+	    cin>>K;
+	    sort(arr+0,arr+N);
+	    cout<<arr[K-1]<<"\n";
+	    N=0;
+	    arr[N]={0};
+	    
+	 }
+	return 0;
+}
