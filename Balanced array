@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define size 10000
+int main()
+{
+    int T,n,i,j,s1=0,s2=0,m,k,l;
+    int a[size];
+    scanf("%d",&T);
+    for(i=0;i<T;i++)
+    {
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+        {
+           scanf("%d ",&a[j]);
+        }
+        m=n/2;
+        for(k=0;k<m;k++)
+        {
+            s1=s1+a[k];
+        }
+        for(l=m;l<n;l++)
+        {
+            s2=s2+a[l];
+        }
+        if(s1>s2)
+        {
+            printf("%d\n",s1-s2);
+        }
+        else
+        {
+            printf("%d\n",s2-s1);   
+        }
+        s1=0;
+        s2=0;
+    }
+	return 0;
+}
